@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.UserBase" table="myf_snapshot_user_base">
+        <id name="fid" type="java.lang.Long" column="fid">
+            <generator class="assigned"/>
+        </id>
+        <property name="education" type="java.lang.String" column="education"/>
+        <property name="jobNature" type="java.lang.String" column="job_nature"/>
+        <property name="companyName" type="java.lang.String" column="company_name"/>
+        <property name="companyPhone" type="java.lang.String" column="company_phone"/>
+        <property name="residentialProvinceCode" type="java.lang.String" column="residential_province_code"/>
+        <property name="residentialCityCode" type="java.lang.String" column="residential_city_code"/>
+        <property name="residentialZoneCode" type="java.lang.String" column="residential_zone_code"/>
+        <property name="residentialAddress" type="java.lang.String" column="residential_address"/>
+        <property name="detailedAddress" type="java.lang.String" column="detailed_address"/>
+        <property name="residentialState" type="java.lang.String" column="residential_state"/>
+        <property name="marriageState" type="java.lang.String" column="marriage_state"/>
+        <property name="email" type="java.lang.String" column="email"/>
+        <property name="creditCardNo" type="java.lang.String" column="credit_card_no"/>
+    </class>
+</hibernate-mapping>

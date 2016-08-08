@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.Mobile" table="myf_snapshot_mobile">
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="fid" type="java.lang.Long" column="fid"/>
+        <property name="name" type="java.lang.String" column="contact_name"/>
+        <property name="mobile" type="java.lang.String" column="contact_mobile"/>
+    </class>
+</hibernate-mapping>

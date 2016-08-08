@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.SaleControl" table="myf_snapshot_sale_control">
+        <id name="fid" type="java.lang.Long" column="fid">
+            <generator class="assigned"/>
+        </id>
+        <property name="customerApplyCode" type="java.lang.String" column="customer_apply_code"/>
+        <property name="storeCode" type="java.lang.String" column="store_code"/>
+        <property name="saleNo" type="java.lang.String" column="sale_no"/>
+        <property name="riskLevel" type="java.lang.String" column="risk_level"/>
+        <property name="personNo" type="java.lang.String" column="person_no"/>
+        <property name="userCode" type="java.lang.String" column="user_code"/>
+        <property name="gpsAddress" type="java.lang.String" column="gps_address"/>
+        <property name="gpsCity" type="java.lang.String" column="gps_city"/>
+        <property name="macAddress" type="java.lang.String" column="mac_address"/>
+        <property name="sesameLevel" type="java.lang.String" column="sesame_level"/>
+        <property name="sesameLevelImg" type="java.lang.String" column="sesame_level_img"/>
+        <property name="deviceIpAddress" type="java.lang.String" column="device_ip_address"/>
+        <property name="createDate" type="java.lang.String" column="create_date"/>
+        <property name="storeProvinceCode" type="java.lang.String" column="store_province_code"/>
+        <property name="storeCityCode" type="java.lang.String" column="store_city_code"/>
+        <property name="storeZoneCode" type="java.lang.String" column="store_zone_code"/>
+        <property name="storeDetailedAddress" type="java.lang.String" column="store_detailed_address"/>
+        <property name="storeLocation" type="java.lang.String" column="store_location"/>
+    </class>
+</hibernate-mapping>

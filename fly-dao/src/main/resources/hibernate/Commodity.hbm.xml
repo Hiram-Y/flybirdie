@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.Commodity" table="myf_snapshot_commodity">
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="fid" type="java.lang.Long" column="fid"/>
+        <property name="sku" type="java.lang.String" column="sku"/>
+        <property name="goodName" type="java.lang.String" column="good_name"/>
+        <property name="goodType" type="java.lang.String" column="good_type"/>
+        <property name="goodDescription" type="java.lang.String" column="good_description"/>
+        <property name="goodClass1" type="java.lang.String" column="good_class1"/>
+        <property name="goodClass2" type="java.lang.String" column="good_class2"/>
+        <property name="goodClass3" type="java.lang.String" column="good_class3"/>
+        <property name="goodBrand" type="java.lang.String" column="good_brand"/>
+    </class>
+</hibernate-mapping>

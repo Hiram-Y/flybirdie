@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+	<bean id="mytest"  name = "test123" class="org.cf.util.Mytest"/>
+	
+	<!-- 使用构造器实例化bean -->
+	<bean  id = "customerInformationService" class = "common.springTest.Information.impl.CustomerInformationService"></bean>
+    <bean  id = "instanceBean" class = "common.springTest.InstanceBean">
+        <property name ="customerInformation" ref = "customerInformationService"/>
+    </bean>
+    
+    <!-- 使用静态工厂方法 实例化bean-->
+    <bean id = "dogFactory" class = "common.springTest.Information.impl.StaticBeingFactory" factory-method="getBeing">
+        <constructor-arg value="汪星人"/>
+        <property name = "mas" value="汪星人的天下"></property>
+    </bean>
+     <bean id = "catFactory" class = "common.springTest.Information.impl.StaticBeingFactory" factory-method="getBeing">
+             <constructor-arg value="喵星人"/>
+             <property name = "mas" value=" 喵星人的天下"></property>
+    </bean>
+    
+    <!-- 使用实例化工厂方法实例化bean -->
+    <bean id = "PersonBeanInstanceFactory" class= "common.springTest.Information.impl.PersonBeanInstanceFactory"/>
+    <bean id="chinese" factory-bean="PersonBeanInstanceFactory" factory-method="getPersion">
+    <!-- 调用工厂方法，传入需要传递的值 -->
+        <constructor-arg value="chinese12"/>
+    </bean>
+      <bean id="American" factory-bean="PersonBeanInstanceFactory" factory-method="getPersion">
+    <!-- 调用工厂方法，传入需要传递的值 -->
+        <constructor-arg value="American211"/>
+    </bean>
+    <!-- ====================抽象bean 的使用 -->
+    <!-- 抽象bean的使用 ，定义抽象bean的模板--> 
+    <bean id = "chineseTemplept" abstract="true">
+        <property name="name" value="李磊"></property>
+    </bean>
+    <!--  -->
+    <bean id="chinese" class="" parent="chineseTemplept">
+    
+    
+    </bean>
+    
+    
+
+
+
+	<!-- 使用注解注入properties中的值 -->
+	<bean id="setting"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:*.properties</value>
+				<value>file:config/*.conf</value>
+			</list>
+		</property>
+		<!-- 设置编码格式 -->
+		<property name="fileEncoding" value="UTF-8"></property>
+	</bean>
+</beans>  

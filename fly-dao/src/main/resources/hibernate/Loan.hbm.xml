@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.Loan" table="myf_snapshot_loan">
+        <id name="fid" type="java.lang.Long" column="fid">
+            <generator class="assigned"/>
+        </id>
+        <property name="cityCode" type="java.lang.String" column="city_code"/>
+        <property name="eventCode" type="java.lang.String" column="event_code"/>
+        <property name="financeCode" type="java.lang.String" column="finance_code"/>
+        <property name="goodsAmount" type="java.lang.String" column="goods_amount"/>
+        <property name="downPaymentRatio" type="java.lang.String" column="down_payment_ratio"/>
+        <property name="downPaymentAmount" type="java.lang.String" column="down_payment_amount"/>
+        <property name="loanAmount" type="java.lang.String" column="loan_amount"/>
+        <property name="monthRepayAmount" type="java.lang.String" column="month_repay_amount"/>
+        <property name="term" type="java.lang.Integer" column="term"/>
+        <property name="paymentBag" type="java.lang.String" column="payment_bag"/>
+    </class>
+</hibernate-mapping>

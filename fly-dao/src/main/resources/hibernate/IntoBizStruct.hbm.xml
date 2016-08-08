@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-21 11:52:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="data.IntoBizStruct" table="myf_snapshot_biz_struct">
+
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="status" type="java.lang.Integer" column="status"/>
+        <property name="createTime" type="java.util.Date" column="create_time"/>
+        <property name="sessionToken" type="java.lang.String" column="session_token"/>
+        <property name="doneTime" type="java.util.Date" column="done_time"/>
+
+        <property name="userId" type="java.lang.String" column="user_id"/>
+        <property name="customerId" type="java.lang.String" column="customer_id"/>
+        <property name="mobile" type="java.lang.String" column="mobile"/>
+        <property name="realName" type="java.lang.String" column="real_name"/>
+        <property name="gender" type="java.lang.String" column="gender"/>
+        <property name="identityNo" type="java.lang.String" column="identity_no"/>
+
+        <property name="debitCardNo" type="java.lang.String" column="debit_card_no"/>
+        <property name="bankCode" type="java.lang.String" column="bank_code"/>
+        <property name="bankName" type="java.lang.String" column="bank_name"/>
+        <property name="bankProvinceCode" type="java.lang.String" column="bank_province_code"/>
+        <property name="bankProvinceName" type="java.lang.String" column="bank_province_name"/>
+        <property name="bankCityCode" type="java.lang.String" column="bank_city_code"/>
+        <property name="bankCityName" type="java.lang.String" column="bank_city_name"/>
+        <property name="bankReserveMobile" type="java.lang.String" column="bank_reserve_mobile"/>
+
+        <list name="commodities" table="myf_snapshot_commodity" lazy="false" cascade="none" inverse="true">
+            <key column="fid" foreign-key="id"/>
+            <index column="id"/>
+            <one-to-many class="data.Commodity" />
+        </list>
+
+        <one-to-one name="loan" class="data.Loan" constrained="true" lazy="false" fetch="select" cascade="none" />
+
+        <one-to-one name="userBase" class="data.UserBase" constrained="true" lazy="false" fetch="select" cascade="none" />
+
+        <list name="contacts" table="myf_snapshot_contacts" lazy="false" cascade="none" inverse="true">
+            <key column="fid" foreign-key="id"/>
+            <index column="id"/>
+            <one-to-many class="data.Contacts" />
+        </list>
+
+        <list name="mobiles" table="myf_snapshot_mobile" lazy="false" cascade="none" inverse="true">
+            <key column="fid" foreign-key="id"/>
+            <index column="id"/>
+            <one-to-many class="data.Mobile" />
+        </list>
+
+        <property name="appSerialNo" type="java.lang.String" column="app_serial_no"/>
+        <property name="applySerialNo" type="java.lang.String" column="apply_serial_no"/>
+        <property name="contractNo" type="java.lang.String" column="contract_no"/>
+
+        <one-to-one name="saleControl" class="data.SaleControl" constrained="true" lazy="false" fetch="select" cascade="none" />
+
+        <property name="longitude" type="java.lang.String" column="longitude"/>
+        <property name="latitude" type="java.lang.String" column="latitude"/>
+        <property name="fingerprint" type="java.lang.String" column="fingerprint"/>
+
+    </class>
+</hibernate-mapping>
