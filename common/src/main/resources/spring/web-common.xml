@@ -36,14 +36,13 @@
     </bean>
     <!-- ====================抽象bean 的使用 -->
     <!-- 抽象bean的使用 ，定义抽象bean的模板--> 
-    <bean id = "chineseTemplept" abstract="true">
+   <!--  <bean id = "chineseTemplept" abstract="true">
         <property name="name" value="李磊"></property>
     </bean>
-    <!--  -->
     <bean id="chinese" class="" parent="chineseTemplept">
     
     
-    </bean>
+    </bean> -->
     
     
 
